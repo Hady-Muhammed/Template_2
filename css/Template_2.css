@@ -661,7 +661,7 @@ section .text .flex p {
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(200px , 1fr));
     text-align: center;
-    gap: 20px;
+    gap: 80px;
 }
 .pricing .gridbox .col div {
     border-top: 2px solid var(--secondary-color);
@@ -735,7 +735,7 @@ section .text .flex p {
     background-color: transparent;
     border: 1px solid white;
     outline: none;
-    color: white;
+    color: white;   
     height: 45px;
     width: 60%;
  }
