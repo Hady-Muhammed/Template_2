@@ -74,9 +74,10 @@ ul {
 header {
     background-image: url(../images/header1.jpg);
     background-repeat: no-repeat;
-    height: 75vh;
+    height: 90vh;
     background-size: cover;   
     position: relative;
+    overflow: hidden;
 }
 
 header .content .text {
@@ -88,11 +89,11 @@ header .content .text {
     padding: 50px;
     color: white;
     background-color: #e91e634d;
-    max-height: 285px;
 }
-@media (max-width: 769px) {
+@media (max-width: 900px) {
     header .content .text {
         width: 100%;
+        height: fit-content;
     }
 }
 header .content p {
@@ -357,8 +358,8 @@ section .text .flex p {
     transform: translateY(-50%);
     background-color: rgba(54, 167, 254, 0.603);
     width: 100%;
-    height: 15vh;
-    padding: 130px;
+    height: fit-content;
+    padding: 80px;
     text-align: center;
     color: white;
  }
@@ -368,17 +369,15 @@ section .text .flex p {
  }
  .jack button {
     display: block;
-    position: absolute;
-    top: 85%;
-    left: 46%;
+    margin: 20px auto;
     background-color: black;
     color: white;
     padding: 5px;
     border-radius: 5px;
  }
- @media (max-width: 769px) {
+ @media (max-width: 600px) {
     .jack button {
-        left: 43%;
+    
     }
  }
  /* End Content */
@@ -419,7 +418,7 @@ section .text .flex p {
  .stats .container {
     display: flex;
     margin: 60px auto;
-    padding: 50px;
+    padding: 45px;
     background-color: #e91e635c;
     position: relative;
     top: 50%;
@@ -438,6 +437,11 @@ section .text .flex p {
  }
  .stats .container .box h3 {
     font-size: 40px;   
+ }
+ @media (max-width: 700px) {
+    .stats .container {
+        flex-direction: column;
+    }
  }
  /* End Stats */
  /* Start Data */
@@ -487,8 +491,9 @@ section .text .flex p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 272px;
+    height: fit-content;
     align-content: space-between;
+    gap: 10px;
     }
  .data .container .box .flex img {
     width: 100px;
@@ -753,6 +758,21 @@ section .text .flex p {
     width: 40%;
     color: white;
 }
+@media (max-width: 769px) {
+    .email {
+        height: fit-content;
+        flex-direction: column-reverse;
+        padding: 85px 0;
+    }
+}
+@media (max-width: 525px) {
+    .email input[type="email"] {
+        width: 100%;
+    }
+    .email input[type="submit"] {
+        width: 100%;
+    }
+}
  /* End Email */
  /* Start Contact */
  
@@ -763,10 +783,11 @@ section .text .flex p {
  .contact .container {
     margin: 20px auto;
     position: relative;
+    padding: 40px;
  }
  .contact .container .text {
     position: absolute;
-    right: 6%;
+    right: 4%;
     top: -18%;
  }
  .contact .container .text h5 {
@@ -805,7 +826,7 @@ section .text .flex p {
 }
 @media (max-width: 850px) {
     .contact form input[type='submit'] {
-        width: 30%;
+        width: fit-content;
     }
 }
  /* End Contact */
@@ -820,7 +841,7 @@ section .text .flex p {
     flex-direction: column;
 }
 .footer .container {
-    width: 20%;
+    width: fit-content;
     height: 60%;
 }
 .footer .container img {
