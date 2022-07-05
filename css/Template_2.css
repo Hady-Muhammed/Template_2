@@ -732,6 +732,11 @@ section .text .flex p {
         width: 30%;
     }
 }
+@media (max-width: 400px) {
+    .pricing .gridbox {
+        margin: 100px 0;
+    }
+}
  /* End Pricing */
  /* Start Email */
  .email {
