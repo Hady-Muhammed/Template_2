@@ -129,6 +129,9 @@ header .container::after {
 nav {
     width: 70%;
 }
+.header-content {
+    position: relative;
+}
 .header-content i {
     font-size: 22px;
     color: white;
@@ -140,6 +143,23 @@ nav {
     right: -50px;
     top: 23px;
     border-left: 2px solid #a2a2a2;
+    cursor: pointer;
+}
+.header-content input {
+    display: none;
+    position: absolute;
+    top: 95%;
+    padding: 1em;
+    width: 50%;
+    left: 56%;
+    border: none;
+    outline: none;
+    z-index: 1;
+    border-radius: 15px;
+    background-color: #be6c88;
+    color: white;
+    font-size: 1.5em;
+    font-family: monospace;
 }
 @media (max-width: 899px) {
     .header-content i {
@@ -200,7 +220,7 @@ header .container .header-content {
     text-align: center;
     font-family: 'Comforter Brush', cursive;
 }
-.active {
+.active1 {
     color: var(--main-color) !important;
     border-bottom: 1px solid var(--main-color);
 }
@@ -311,12 +331,8 @@ section .text .flex p {
     padding: 20px;
     transition: 0.2s;
 }
-.portfolio-content ul li:hover {
-    background-color: var(--main-color);
-    color: white;
-    border-radius: 5px;
-}
-.portfolio-content ul li:first-child {
+.portfolio-content ul li:hover ,
+.active {
     background-color: var(--main-color);
     color: white;
     border-radius: 5px;
@@ -362,18 +378,20 @@ section .text .flex p {
  .jack img {
     width: 100%;
     height: 100%;
-    
+    object-fit: cover;
  }
  .jack .text {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(54, 167, 254, 0.603);
-    width: 100%;
+    background-color: rgb(37 42 46 / 89%);
+    width: 70%;
+    left: 50%;
+    transform: translate(-50% , -50%);
     height: fit-content;
     padding: 80px;
     text-align: center;
     color: white;
+    border-radius: 100px;
  }
  .jack .text h2 {
     font-weight: normal;
@@ -387,9 +405,9 @@ section .text .flex p {
     padding: 5px;
     border-radius: 5px;
  }
- @media (max-width: 600px) {
-    .jack button {
-    
+ @media (max-width: 700px) {
+    .jack .text {
+        width: 100%;
     }
  }
  /* End Content */
@@ -424,8 +442,18 @@ section .text .flex p {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 490px;
+    height: 70vh;
     margin-bottom: 200px;
+    position: relative;
+ }
+ .stats::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.52);
  }
  .stats .container {
     display: flex;
@@ -453,6 +481,7 @@ section .text .flex p {
  @media (max-width: 700px) {
     .stats .container {
         flex-direction: column;
+        height: 100%;
     }
  }
  /* End Stats */
@@ -649,7 +678,7 @@ section .text .flex p {
     align-items: center;
     transition: 0.3s;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .quote q {
@@ -897,6 +926,31 @@ section .text .flex p {
 .footer pre span {
     color: var(--main-color);
     font-weight: bold;
+}
+#btn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    padding: 15px;
+    border: none;
+    background-color: #e91e63;
+    color: white;
+    transition: .5s;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+#btn i {
+    margin-left: 5px;
+    animation: scrolly .7s linear infinite alternate;
+}
+@keyframes scrolly {
+    from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(5px);
+    }
 }
  /* End Footer */
  @media (max-height: 700px) {
