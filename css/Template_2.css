@@ -279,7 +279,6 @@ section .text {
     top: 50%;
     transform: translateY(-50%);
     width: 50%;
-    height: 30vh;
     background-color: #c41ee99c;
     color: white;
     border: 1px solid black;
