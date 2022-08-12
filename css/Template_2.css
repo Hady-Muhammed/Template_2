@@ -358,7 +358,8 @@ section .text .flex p {
     border-radius: 10%;
     outline: none;
     border: none;
-    margin: 20px 45%;
+    margin: 20px auto;
+    display: block;
     letter-spacing: 2px;
 }
 @media (max-width: 500px) {
