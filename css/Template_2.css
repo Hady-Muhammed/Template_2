@@ -872,6 +872,7 @@ section .text .flex p {
     border: none;
     margin: auto;
     cursor: pointer;
+    margin-top: 2em;
 }
 @media (max-width: 850px) {
     .contact form input[type='submit'] {

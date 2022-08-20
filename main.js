@@ -8,6 +8,8 @@ let printt = document.getElementById("print");
 let photogrid = document.getElementById("photogrid");
 let searchBtn = document.getElementById("search");
 let scrollBtn = document.getElementById("btn");
+let statsNums = document.querySelectorAll(".stats h3");
+let stats = document.querySelector(".stats");
 
 app.addEventListener("click", () => {
   photogrid.innerHTML = `
@@ -110,4 +112,15 @@ window.onscroll = function () {
         scrollBtn.style.opacity = '0';
         scrollBtn.style.pointerEvents = 'none';
     }
+    if(window.scrollY >= stats.offsetTop - 700) {
+      statsNums.forEach((stat)=> {
+        let incre = setInterval(()=> {
+            if(stat.innerText == stat.dataset.goal) {
+              clearInterval(incre);
+            } else {
+              stat.innerText++;
+            }
+          }, 1000 / stat.dataset.goal);
+      })
+    }   
 }
